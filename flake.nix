@@ -11,11 +11,12 @@
           with nodePackages; [
             nodejs
             live-server
-            pm2
+            # pm2
           ];
         shellHook = ''
-          unset name
-          pm2 start live-server
+          live-server &
+          # unset name
+          # pm2 start live-server
         '';
       };
     };
